@@ -12,8 +12,6 @@
 
 ### Best practices for GIT version control
 
-  - Add a new tag with format of `v<major>.<minor>.<patch>` when deploying a new release
-
   - Use one short sentence as a commit message (start with upper case letter, no dot at the end)
 
 	> Fixed typo in the readme file
@@ -24,16 +22,6 @@
 	>
 	> When app had a scandic letters in its name the whole list got broken. This was due to our simple
 	> hack that we use to migrate old apps.
-
-  - Implement every feature (Trello card) in its own separate branch named as `feature-<Trello card id>` (feature branching)
-
-  For many small features that are more easy to implement in the same branch you can combine the cards into one single card with checklist item for each of the separate card.
-
-  - When a feature (Trello card) is ready move it to 'Ready for Testing' list and add label 'Waiting for merging' (substitute for pull request)
-
-  Before doing this merge the latest changes from master branch and make sure that everything works. Also make a quick code review through 'git diff' against master for spotting left over code or accidental formatting mistakes such as EOL or empty line changes due to wrong editor configuration etc.
-
-  - Before every Scrum meeting merge all your ready / waiting for merge feature brances into `testing` branch and deploy it to the devel environment.
 
 ### Best practices for coding with Angular 2
 
@@ -152,134 +140,17 @@
     }
   ```
 
+  - Use nested hierarchy instead of plain CSS hierarchy for better readability and easier style adding
+
+  ```
+    .container {
+      padding: 16px;
+
+      .title {
+        font-size: 16px;
+      }
+    }
+  ```
+
   - To create new components, services, pipes etc. use the angular-cli tool and for the directory structure use + as prefix for routes and place components / services / pipes / models / etc. that are used by multiple components into shared folder
-
-### Naming conventions within the project
-
-  - Components (< id >.component.ts):
-
-  ```
-    <name>App        HomeApp           home-app
-    <name>View       MainView          main-view
-    <name>Pane       DetailPane        detail-pane
-    <name>Card       AnalyzeCard       analyze-card
-    <name>Bar        NavBar            nav-bar
-    <name>Menu       MainMenu          main-menu
-    <name>List       MasterList        master-list
-    <name>Panel      PublisherPanel    publisher-panel
-
-    Panel, Gallery, Translator (Shared components)
-  ```
-
-  - Services (< name >-< type >.service.ts):
-
-  ```
-    <name>Api        FlickrApi         API service
-    <name>Bus        MessageBus        Relays data
-    <name>State      RouterState       Router data
-    <name>Logger     ActivityLogger    Logging service
-    <name>Resolve    SurveyResolve     Resolve service
-    <name>Manager    AuthManager       Manager service
-  ```
-
-  - Models (< name >.model.ts can hold any of the below):
-
-  ```
-    <name>Data       SurveyData        Data object
-    <name>List       FilesList         List of objects
-  ```
-
-  - Guards (< name >.guard.ts can hold any of the below):
-
-  ```
-    <name>Check      AuthCheck         Check if ok to load or not
-    <name>Required   AuthRequired      Redirects if condition not ok
-  ```
-
-  - Pipes (< action >-< target >.pipe.ts):
-
-  ```
-    <Action><Target>    CapitalizeText
-  ```
-
-  - Enums (< type >.enum.ts):
-
-  ```
-    <Type>              Events
-  ```
-
-  - Variables:
-
-  ```
-    open                Component flags
-    visible             Component flags
-    toolbar             Component flags
-
-    routeSub            Subscriptions etc.
-    selectedTab         State info etc.
-    questionsList       List of data etc.
-  ```
-
-### Additions into the Firebase database
-
-  - First add a documentation into the src/app/shared/models/README.md file and then verify the structure from the CA
-
-### Documentating the code and README files
-
-  - Document all classes with 1-3 short sentences by using TypeDoc format
-
-  - Document all functions with 1-3 short sentences and parameters by using TypeDoc format
-
-  ```
-    /**
-     * This can be used to resolve UI state data in the routes.
-     */
-
-    /**
-     * This function is run when login button is clicked.
-     * @param event  Comment for the parameter 'event'.
-     * @returns      Comment for the return value.
-     */
-  ```
-
-  - In addition for all shared components etc. add short usage info / data descriptions into the README.md file in the same folder with API Blueprint / Markdown language
-
-  ```
-    # Component name - Very short description
-
-    + Inputs
-
-      + name: string = '';
-      + disabled: boolean = false;
-
-    + Outputs
-
-      + onChange({name: <name: string>, checked: <checked: boolean>});
-
-    ## Code example
-
-    ` ` `html
-      <component class="checkbox" [disabled]="false"></component>
-    ` ` `
-  ```
-
-### Temporal / personal extra documentation
-
-  - You can add TODO comments for tasks that needs to be done later:
-
-  ```
-    // TODO: Finish this later once this bug is resolved:
-    // https://github.com/some-project/issues/123456
-  ```
-
-  - For temporal development notes for yourself / other use NOTE comments:
-
-  ```
-    // NOTE: There might be better way to do this, but for now this works
-  ```
-
-  - For cards which have 'Needs some fixes' label there are FIXME comments:
-  ```
-    // FIXME: This needs to use resolve data instead of the manual service
-  ```
 
