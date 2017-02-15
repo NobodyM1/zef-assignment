@@ -1,5 +1,5 @@
-ZEF Assignment
---------------
+#ZEF Assignment
+---------------
 
 Replicate the given design visually as closely as possible. For margins / 
 paddings / etc. that are not defined in the design you can use your own 
@@ -9,14 +9,14 @@ Use variables for max width and other layout related sizes for easy changing
 (Only the main layout parts, don't make everything like all the paddings and 
 margins as variables).
 
-# Design to replicate:
+### Design to replicate:
 
   https://projects.invisionapp.com/d/main#/projects/prototypes/10303166
 
   You should have invitation in your email to set up a free account to
   invision.
 
-# Steps to get started:
+### Steps to get started:
 
   - Create a new branch for your work and push it to the remote repository.
   
