@@ -13,11 +13,12 @@ margins as variables).
 
   https://projects.invisionapp.com/d/main#/projects/prototypes/10303166
 
-  You should have invitation in your email to set up free account.
+  You should have invitation in your email to set up a free account to
+  invision.
 
 # Steps to get started:
 
-  - Create a new branch for your work and push it to the remote.
+  - Create a new branch for your work and push it to the remote repository.
   
     You can do commits and pushes to your branch as you wish, we only
     check the final code commit / push on Wednesday 22.2 22:00.
@@ -31,7 +32,7 @@ margins as variables).
   - Implement the design into app.component.html and app.component.scss.
 
     You can naturally generate more components and use the typescript 
-    file as well, but one component implementation is enough.
+    files as well, but one component implementation is enough.
 
   - For the layout use the attributes provided by flex-layout library
     (fxLayout, fxFlex etc.).
@@ -43,6 +44,10 @@ margins as variables).
   - Use material library elements always when possible instead of pure
     html elements (input, button). The template has an example of using
     material button and input.
+
+    More info about the material components and their usage:
+
+    https://material.angular.io/
 
   - The application does not need to have any real functionality, i.e. the 
     plain UI implementation is enough. You can use the ngIf and click events 
