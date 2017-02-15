@@ -37,6 +37,9 @@ margins as variables).
   - For the layout use the attributes provided by flex-layout library
     (fxLayout, fxFlex etc.).
 
+    You can use the breakpoints provided by the library (xs,sm,lg, etc.)
+    instead of the breakpoints mentioned in the designs.
+
     More info about the flex-layout library and its usage:
 
     https://github.com/angular/flex-layout
