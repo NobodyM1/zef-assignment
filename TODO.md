@@ -5,9 +5,9 @@ Replicate the given design visually as closely as possible. For margins /
 paddings / etc. that are not defined in the design you can use your own 
 estimation. Try to make the styles generic, i.e. don't style each element 
 individually, instead style each widget/element with using generic classes.
-For max width or other layout related sizes should be used as variables for
-easy changing (Only the main layout parts, don't make everything like all 
-the paddings and margins as variables).
+Use variables for max width and other layout related sizes for easy changing
+(Only the main layout parts, don't make everything like all the paddings and 
+margins as variables).
 
 # Design to replicate:
 
