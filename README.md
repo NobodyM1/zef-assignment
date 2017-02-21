@@ -2,6 +2,8 @@
 
 ### Setting up development environment
 
+  - Install latest Node 6.x
+
   - npm install -g angular-cli
 
 ### Required editor plugins for consistency
@@ -153,4 +155,3 @@
   ```
 
   - To create new components, services, pipes etc. use the angular-cli tool and for the directory structure use + as prefix for routes and place components / services / pipes / models / etc. that are used by multiple components into shared folder
-
