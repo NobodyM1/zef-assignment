@@ -18,7 +18,7 @@ Make an application that implements the functionality of the given design. You c
 
   - Create a new branch for your work and push it to the remote repository.
 
-    You can do commits and pushes to your branch as you wish, we only check the final code commit / push when given deadline has passed.
+    You can do commits to your branch as you wish, but only push your final version before the given deadline.
 
   - Setup your development environment by running: npm install
 
@@ -63,7 +63,7 @@ Make an application that replicates the given design visually as closely as poss
 
   - Create a new branch for your work and push it to the remote repository.
 
-    You can do commits and pushes to your branch as you wish, we only check the final code commit / push when given deadline has passed.
+    You can do commits to your branch as you wish, but only push your final version before the given deadline.
 
   - Setup your development environment by running: npm install
 
