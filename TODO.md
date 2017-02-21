@@ -5,7 +5,7 @@ You should have been tasked by ZEF to do either the Coding Assignment *OR* Desig
 
 ### Coding Assignment
 
-Make an application that implements the functionality of the given design. You can implement the UI with material components that resembles the components in the design, i.e. the visual appearance does not need to match the design just the functionality and general layout. For the interaction parts that are not clearly visible in the design use your own imagination about how the checkout process should work.
+Make an application that implements the functionality of the given design. You can implement the UI with material components that resembles the components in the design, i.e. the visual appearance does not need to match the design just the functionality and general layout. For the interaction parts that are not clearly visible in the design use your own imagination about how the checkout process should work. We don't expect fully implemented application only the basic functionality that forms the basic checkout process visible in the design, but its up to you how far you take the assignment.
 
 ##### Design for the app:
 
