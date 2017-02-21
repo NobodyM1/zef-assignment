@@ -16,7 +16,7 @@ Make an application that implements the functionality of the given design. You c
 
 ##### Steps to get started:
 
-  - Create a new branch for your work and push it to the remote repository.
+  - Create a new local branch for your work.
 
     You can do commits to your branch as you wish, but only push your final version before the given deadline.
 
@@ -61,7 +61,7 @@ Make an application that replicates the given design visually as closely as poss
 
 ##### Steps to get started:
 
-  - Create a new branch for your work and push it to the remote repository.
+  - Create a new local branch for your work.
 
     You can do commits to your branch as you wish, but only push your final version before the given deadline.
 
