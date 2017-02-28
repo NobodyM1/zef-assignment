@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public view = 'company-info';
+  public view = 'intro';
   public plan = 'annual';
-  public form = 'add-payment'
+  public form = 'company-info';
 
   public title = 'ZEF Assignment';
 
@@ -32,16 +32,5 @@ export class AppComponent {
     {value: '11', viewValue: 'Nov'},
     {value: '12', viewValue: 'Dec'}
   ];
-
-  years = [
-    {value: '2017', viewValue: '2017'},
-    {value: '2018', viewValue: '2018'},
-    {value: '2019', viewValue: '2019'},
-    {value: '2020', viewValue: '2020'}
-  ];
-
-  public price(price){
-    console.log(price);
-  }
 
 }

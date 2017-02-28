@@ -1,6 +1,6 @@
 <div *ngIf="view === 'default'" class="app" fxLayout="column" fxLayoutAlign="center stretch">
   <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex>
-    <div class="exit"><a (click)="view = 'default'">X</a></div>
+    <div class="exit"><a (click)="view = 'default'" (click)="form = 'company-info'">X</a></div>
     <div class="header" fxLayout="column">
       <h1>A perfect plan, for everyone</h1>
       <h4>For detailed feature breakdown, view our <a href="#">pricing page</a></h4>
@@ -100,7 +100,7 @@
 
 <div *ngIf="view === 'company-info'" class="app" fxLayout="column" fxLayoutAlign="center stretch">
   <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex>
-    <div class="exit"><a (click)="view = 'default'">X</a></div>
+    <div class="exit"><a (click)="view = 'default'" (click)="form = 'company-info'">X</a></div>
     <div class="checkoutMenu" fxLayout="row" fxLayoutAlign="center center">
       <div><md-icon>lock</md-icon>Checkout</div>
       <ul class="menuList" fxLayout="row">
@@ -201,7 +201,7 @@
           <!-- PAY VIEW -->
           <div class="pay" *ngIf="form === 'pay'" fxLayout="column" fxLayoutAlign="center center">
             <div>Total billed $205</div>
-            <button class="greenButton" md-raised-button (click)="view = 'default'" (click)="form = 'company-info'">Confirm Payment</button>
+            <button class="greenButton" md-raised-button (click)="view = 'intro'" (click)="form = 'company-info'">Confirm Payment</button>
             <div><h4><md-icon>lock</md-icon>Secure 128-bit encrypted payment</h4></div>
           </div>
 
@@ -261,4 +261,12 @@
   </div>
 </div>
 
-<!-- ADD PAYMENT VIEW -->
+<div *ngIf="view === 'intro'" class="app" fxLayout="column" fxLayoutAlign="center stretch">
+  <div class="content"  fxLayoutAlign="center center" fxFlex>
+    <div class="introPage" fxLayout="column">
+      <div class="introContent"><h1>[12]</h1></div>
+      <div class="introContent"><h1>ZEF Assignment</h1></div>
+      <div class="rainbowText"><a (click)="view = 'default'">Checout</a></div>
+    </div>
+  </div>
+</div>

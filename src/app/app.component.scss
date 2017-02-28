@@ -4,6 +4,30 @@
     height: 100%;
   }
 
+  .introPage {
+    height: 100%;
+    align-items: center;
+  }
+
+  .introContent {
+    font-size: 25px;
+    color: grey;
+  }
+
+  .rainbowText {
+    font-size: 4em;
+    font-weight: bold;
+    background-image: -webkit-linear-gradient(to right, yellow,green,red,purple,blue);
+    background-image: linear-gradient(to right, yellow,green,red,purple,blue);
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .rainbowText a:hover{
+    cursor: pointer;
+  }
+
   /*  pricing plan  */
   .exit {
     position: absolute;
@@ -183,6 +207,10 @@
   .companyInfo {
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .menuList li a:hover {
+    cursor: pointer;
   }
 
   @media screen and ( min-width: 800px){
