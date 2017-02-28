@@ -10,10 +10,6 @@ export class AppComponent {
   public plan = 'annual';
   public form = 'company-info';
 
-  public title = 'ZEF Assignment';
-
-  public company = 'Untitled';
-
   public pricingPlan = 'annuallyBasic';
 
   selectedValue: string;
