@@ -7,16 +7,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     FlexLayoutModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

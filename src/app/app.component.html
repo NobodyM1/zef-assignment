@@ -1,36 +1,264 @@
 <div *ngIf="view === 'default'" class="app" fxLayout="column" fxLayoutAlign="center stretch">
-  <div class="title" fxLayout="row" fxLayoutAlign="center center">
-    {{title}}
-  </div>
-
   <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex>
-    Price: {{plan === 'monthly' ? 10 : 5}}
-    <br>
-    <br>
-
-    <button md-raised-button (click)="plan = 'annual'">Annual pricing</button>
-    <br>
-    <button md-raised-button (click)="view = 'company-info'">Company info</button>
+    <div class="exit"><a (click)="view = 'default'">X</a></div>
+    <div class="header" fxLayout="column">
+      <h1>A perfect plan, for everyone</h1>
+      <h4>For detailed feature breakdown, view our <a href="#">pricing page</a></h4>
+    </div>
+    <div class="pricingMethod">
+      <button md-raised-button (click)="plan = 'annual'" autofocus>Annual</button>
+      <button md-raised-button (click)="plan = 'monthly'">Monthly</button>
+    </div>
+    <div class="routerContent" fxLayoutAlign="center center">
+      <div *ngIf="plan === 'annual'" class="app" fxLayout="column" fxLayoutAlign="center stretch">
+        <div class="cont">
+        <div class="inner flex">
+          <ul class="item" fxLayout="column" fxLayoutAlign="center center">
+            <li fxLayoutAlign="center center">Free</li>
+            <li fxLayoutAlign="center center">$0</li>
+            <li fxLayoutAlign="center center"></li>
+            <li fxLayoutAlign="center center">1 survey</li>
+            <li fxLayoutAlign="center center">MORE DETAILS</li>
+            <li fxLayoutAlign="center center"><button md-raised-button style="background-color: grey;">Current plan</button></li>
+            <li fxLayoutAlign="center center"></li>
+          </ul>
+          <ul class="item" fxLayout="column" fxLayoutAlign="center center">
+            <li fxLayoutAlign="center center">Basic</li>
+            <li fxLayoutAlign="center center">$11</li>
+            <li fxLayoutAlign="center center">$1 Savings</li>
+            <li fxLayoutAlign="center center">10 survey</li>
+            <li fxLayoutAlign="center center">MORE DETAILS</li>
+            <li fxLayoutAlign="center center"><button class="greenButton" (click)="view = 'company-info'" (click)="pricingPlan = 'annuallyBasic'" md-raised-button>Choose plan</button></li>
+            <li fxLayoutAlign="center center">Start free trial</li>
+          </ul>
+          <ul class="item" fxLayout="column" fxLayoutAlign="center center">
+            <li fxLayoutAlign="center center">Pro</li>
+            <li fxLayoutAlign="center center">$108</li>
+            <li fxLayoutAlign="center center">$12 Savings</li>
+            <li fxLayoutAlign="center center">50 survey</li>
+            <li fxLayoutAlign="center center">MORE DETAILS</li>
+            <li fxLayoutAlign="center center"><button class="greenButton" (click)="view = 'company-info'" (click)="pricingPlan = 'annuallyPro'" md-raised-button>Choose plan</button></li>
+            <li fxLayoutAlign="center center">Start free trial</li>
+          </ul>
+          <ul class="item" fxLayout="column" fxLayoutAlign="center center">
+            <li fxLayoutAlign="center center">Enterprise</li>
+            <li fxLayoutAlign="center center">Custom</li>
+            <li fxLayoutAlign="center center"></li>
+            <li fxLayoutAlign="center center">Unlimited surveys</li>
+            <li fxLayoutAlign="center center">MORE DETAILS</li>
+            <li fxLayoutAlign="center center"><button class="blueButton" md-raised-button>Contact us</button></li>
+            <li fxLayoutAlign="center center">Contact us</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="plan === 'monthly'" class="app" fxLayout="column" fxLayoutAlign="center stretch">
+        <div class="cont">
+        <div class="inner flex">
+          <ul class="item" fxLayout="column" fxLayoutAlign="center center">
+            <li fxLayoutAlign="center center">Free</li>
+            <li fxLayoutAlign="center center">$0</li>
+            <li fxLayoutAlign="center center"></li>
+            <li fxLayoutAlign="center center">1 survey</li>
+            <li fxLayoutAlign="center center">MORE DETAILS</li>
+            <li fxLayoutAlign="center center"><button md-raised-button style="background-color: grey;">Current plan</button></li>
+            <li fxLayoutAlign="center center"></li>
+          </ul>
+          <ul class="item" fxLayout="column" fxLayoutAlign="center center">
+            <li fxLayoutAlign="center center">Basic</li>
+            <li fxLayoutAlign="center center">$1</li>
+            <li fxLayoutAlign="center center"></li>
+            <li fxLayoutAlign="center center">10 survey</li>
+            <li fxLayoutAlign="center center">MORE DETAILS</li>
+            <li fxLayoutAlign="center center"><button class="greenButton" (click)="view = 'company-info'" (click)="pricingPlan = 'monthlyBasic'" md-raised-button>Choose plan</button></li>
+            <li fxLayoutAlign="center center">Start free trial</li>
+          </ul>
+          <ul class="item" fxLayout="column" fxLayoutAlign="center center">
+            <li fxLayoutAlign="center center">Pro</li>
+            <li fxLayoutAlign="center center">$10</li>
+            <li fxLayoutAlign="center center"></li>
+            <li fxLayoutAlign="center center">50 survey</li>
+            <li fxLayoutAlign="center center">MORE DETAILS</li>
+            <li fxLayoutAlign="center center"><button class="greenButton" (click)="view = 'company-info' " (click)="pricingPlan = 'monthlyPro'" md-raised-button>Choose plan</button></li>
+            <li fxLayoutAlign="center center">Start free trial</li>
+          </ul>
+          <ul class="item" fxLayout="column" fxLayoutAlign="center center">
+            <li fxLayoutAlign="center center">Enterprise</li>
+            <li fxLayoutAlign="center center">Custom</li>
+            <li fxLayoutAlign="center center"></li>
+            <li fxLayoutAlign="center center">Unlimited surveys</li>
+            <li fxLayoutAlign="center center">MORE DETAILS</li>
+            <li fxLayoutAlign="center center"><button class="blueButton" md-raised-button>Contact us</button></li>
+            <li fxLayoutAlign="center center">Contact us</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <div *ngIf="view === 'company-info'" class="app" fxLayout="column" fxLayoutAlign="center stretch">
-  <div class="title" fxLayout="row" fxLayoutAlign="center center">
-    {{company}} - Company info
-  </div>
-
   <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex>
-    <md-card>
-      <md-card-header>
-        <md-card-title>Information</md-card-title>
-        <md-card-subtitle>Account</md-card-subtitle>
-      </md-card-header>
+    <div class="exit"><a (click)="view = 'default'">X</a></div>
+    <div class="checkoutMenu" fxLayout="row" fxLayoutAlign="center center">
+      <div><md-icon>lock</md-icon>Checkout</div>
+      <ul class="menuList" fxLayout="row">
+        <li><a (click)="view = 'default'" (click)="form = 'company-info'">Choose plan</a></li>
+        <li><a (click)="form = 'company-info'">Company info</a></li>
+        <li><a (click)="form = 'add-payment'">Payment method</a></li>
+        <li><a (click)="form = 'pay'">Pay</a></li>
+      </ul>
+    </div>
 
-      <md-card-content>
-        <md-input-container>
-          <input md-input placeholder="Company name..." [(ngModel)]="company"/>
-        </md-input-container>
-      </md-card-content>
-    </md-card>
+    <div class="cont test">
+      <div class="test" class="flex " fxLayout="row-reverse" fxLayoutAlign="center stretch">
+        <div class="companyInfo" fxLayoutAlign="center center">
+
+          <!-- COMPANY INFO VIEW -->
+          <div *ngIf="form === 'company-info'">
+            <form name="companyForm">
+            <div class="contentTitle">Verify company info</div>
+            <ul class="fillFields" fxLayout="column"  fxLayoutAlign="center center">
+              <li>
+                <md-input-container>
+                  <input mdInput placeholder="Name" required>
+                </md-input-container>
+              </li>
+              <li fxLayout="row" fxLayoutAlign="center center">
+                <md-select class="country" placeholder="Country" required>
+                  <md-option value="Finland">Finland</md-option>
+                  <md-option value="Norway">Norway</md-option>
+                  <md-option value="Sweden">Sweden</md-option>
+                  <md-option value="Germany">Germany</md-option>
+                </md-select>
+                <md-input-container>
+                  <input mdInput placeholder="ZIP" type="number" required>
+                </md-input-container>
+              </li>
+              <li>
+                <md-input-container>
+                  <input mdInput placeholder="City" required>
+                </md-input-container>
+              </li>
+              <li><button md-raised-button ng-disabled="companyForm.$invalid" (click)="form = 'add-payment'">Add Payment Method</button></li>
+            </ul>
+            </form>
+          </div>
+
+          <!-- ADD PAYMENT VIEW -->
+          <div *ngIf="form === 'add-payment'">
+            <form name="paymentForm">
+              <div class="contentTitle">Add a payment method</div>
+              <ul class="fillFields" fxLayout="column"  fxLayoutAlign="center center">
+                <li>
+                  <md-input-container>
+                    <input mdInput placeholder="Name on the card" required>
+                  </md-input-container>
+                </li>
+                <li>
+                  <md-input-container >
+                    <input mdInput placeholder="Card number" type="number" required>
+                  </md-input-container>
+                </li>
+                <li class="expiry" fxLayout="column">
+                  <label>Expiry*</label>
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <md-select class="month" placeholder="Month" [(ngModel)]="selectedValue" name="month" required>
+                      <md-option *ngFor="let month of months" [value]="month.value">
+                        {{month.viewValue}}
+                      </md-option>
+                    </md-select>
+
+                    <md-select class="year" placeholder="Year" required>
+                      <md-option value="2017">2017</md-option>
+                      <md-option value="2018">2018</md-option>
+                      <md-option value="2019">2019</md-option>
+                      <md-option value="2020">2020</md-option>
+                    </md-select>
+
+                    <md-input-container>
+                      <input mdInput placeholder="CVC" type="number" required>
+                    </md-input-container>
+                  </div>
+                </li>
+                <li fxLayout="row" fxLayoutAlign="center center">
+                  <md-select class="country" placeholder="Country" required>
+                    <md-option value="2017">Finland</md-option>
+                    <md-option value="2018">Norway</md-option>
+                    <md-option value="2019">Sweden</md-option>
+                    <md-option value="2020">Germany</md-option>
+                  </md-select>
+                  <md-input-container class="zip">
+                    <input mdInput placeholder="ZIP" type="number" required>
+                  </md-input-container>
+                </li>
+                <li><button md-raised-button ng-disabled="paymentForm.$invalid" (click)="form = 'pay'" >Add Payment Method</button></li>
+              </ul>
+            </form>
+          </div>
+
+          <!-- PAY VIEW -->
+          <div class="pay" *ngIf="form === 'pay'" fxLayout="column" fxLayoutAlign="center center">
+            <div>Total billed $205</div>
+            <button class="greenButton" md-raised-button (click)="view = 'default'" (click)="form = 'company-info'">Confirm Payment</button>
+            <div><h4><md-icon>lock</md-icon>Secure 128-bit encrypted payment</h4></div>
+          </div>
+
+        </div>
+        <div class="shoppingCart">
+          <div *ngIf="pricingPlan === 'annuallyBasic'" class="app" fxLayout="column" fxLayoutAlign="center center">
+            <ul class="cartInfo" fxLayout="column">
+              <li><md-icon>shopping_cart</md-icon>Shopping Cart</li>
+              <li>BASIC plan</li>
+              <li>10 Surveys</li>
+              <li>$11</li>
+              <li>To be billed annually</li>
+              <li>After 10% annual billing discount.</li>
+              <li>Annual Savings $1</li>
+              <li fxLayoutAlign="center center">PLAN DETAILS</li>
+            </ul>
+          </div>
+          <div *ngIf="pricingPlan === 'annuallyPro'" class="app" fxLayout="column" fxLayoutAlign="center stretch">
+            <ul class="cartInfo" fxLayout="column">
+              <li><md-icon>shopping_cart</md-icon>Shopping Cart</li>
+              <li>PRO plan</li>
+              <li>50 Surveys</li>
+              <li>$108</li>
+              <li>To be billed annually</li>
+              <li>After 10% annual billing discount.</li>
+              <li>Annual Savings $12</li>
+              <li fxLayoutAlign="center center">PLAN DETAILS</li>
+            </ul>
+          </div>
+          <div *ngIf="pricingPlan === 'monthlyBasic'" class="app" fxLayout="column" fxLayoutAlign="center stretch">
+            <ul class="cartInfo" fxLayout="column">
+              <li><md-icon>shopping_cart</md-icon>Shopping Cart</li>
+              <li>BASIC plan</li>
+              <li>10 Surveys</li>
+              <li>$1</li>
+              <li>To be billed monthly</li>
+              <li></li>
+              <li></li>
+              <li fxLayoutAlign="center center">PLAN DETAILS</li>
+            </ul>
+          </div>
+          <div *ngIf="pricingPlan === 'monthlyPro'" class="app" fxLayout="column" fxLayoutAlign="center stretch">
+            <ul class="cartInfo" fxLayout="column">
+              <li><md-icon>shopping_cart</md-icon>Shopping Cart</li>
+              <li>PRO plan</li>
+              <li>50 Surveys</li>
+              <li>$10</li>
+              <li>To be billed monthly</li>
+              <li></li>
+              <li></li>
+              <li fxLayoutAlign="center center">PLAN DETAILS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- ADD PAYMENT VIEW -->
